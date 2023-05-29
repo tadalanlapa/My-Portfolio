@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>HOME PAGE</title>
+<style>
+.slideshow img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:none;
+}
+</style>
+</head>
+<body>
+<h1>welcome to my homepage</h1>
+<div id ="slideshow">
+<img src="Screenshot (4).jpg"alt="img 1">
+<img src="Screenshot (5).jpg"alt="img 2">
+<img src="Screenshot (6).jpg"alt="img 3">
+</div>
+<form id="contact-form">
+<input type="text" id="name"placeholder="Your Name" required>
+<input type="email" id="email"placeholder="Your Email"required>
+<text area id="message" placeholder="Your Good Message For Us" required></text area>
+< button type="submit">Submit</button>
+</form>
+<ul>
+<li><a href="#section1">Section 1</a></li>
+<li><a href="#section2">Section 2</a></li>
+<li><a href="#section3">Section 3</a></li>
+</ul>
+<div id="section1">
+<h2>Section 1</h2>
+</div>
+<div id="section2">
+<h2>Section 2</h2>
+</div>
+<div id="section3">
+<h2>Section 3</h2>
+</div>
+<script>
+let slideshowIndex=0;
+const slideshowImages=document.querySelectorAll("#slideshow img");
+function showNextSlide(){
+slideshowImages[slideshowIndex].style.display="none";
+slideshowIndex=(slideshowIndex + 1)% slideshowImages.length;
+slideshowImages[slideshowIndex].style.display="block";
+}
+setInterval(showNextSlide,3000);
+const contactForm=document.getElementById("contact-form");
+const nameInput=document.getElementById("name");
+const emailInput=document.getElementById("email");
+const messageInput=document.getElementById("message");
+contactForm.addEventListener("submit",function(event){
+event.preventDefault();
+if(nameInput.Value.trim()===''){
+alert("please enter your first name.");
+nameInput.focus();
+return;
+}
+if(email Input .value.trim()===""){
+alert("please enter your email.");
+email input.focus();
+return;
+}
+if(messageInput.value.trim()===""){
+alert("please enter your message for us");
+message input.focus();
+return;
+}
+alert('form has been submitted successfully,thank you have a great day');
+contactForm.reset();
+}
+});
+window.addEventListener('DOM content Loaded',function(){
+const links=document.queryselectorAll('a[href^="#"]');
+<p id="greeting"></p>
+window.addEvent Listener('DOM contentloaded',function(){
+const greeting=document.getElementById('greeting');
+const curentHour=newDate().getHours();
+if(currentHour>=0 && currentHour <12){greeting.text content='mwadzuka bwanji!');
+}else if(currentHour>=12 && currentHour <18){
+greeting.textcontent='Good afternoon';
+}else{
+greeting.textcontent='mwatandala!';
+}
+});
+</html>
+</body>
+
+
+
