@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="script 7.js"></script>
+<title>Contact page</title>
+<style>
+body{
+font-family:Arial,Sans-serif;
+margin:0;
+padding:0;
+}
+h1{
+color:pink;
+padding:20px;
+text-align:center;
+}
+main{
+padding:20px;
+}
+.form-group{
+margin-bottom:20px;
+}
+label{
+display:block;
+font-weight:bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+width:100%;
+padding:10px;
+font-size:16px;
+border:1px solid pink;
+border-radius:4px;
+}
+button[type="submit"]{
+padding:10px 20px;
+font-size:16px;
+background-color:pink;
+color:black;
+border:none;
+border-radius:4px;
+cursor:pointer;
+}
+.map{
+width:100%
+height:300px;
+margin-bottom:20 px;
+}
+.sm_icon{
+width:2px;
+height:5px;
+}
+.social media{
+text-align:center;
+margin-top:30px;
+}
+.social meadia a{
+display:inline-block;
+margin:0 10px;
+color:pink;
+text-decoration:none;
+}
+</style>
+<script>
+function validateForm(){
+var name=document.getElementById("name").value;
+var email=document.getElementById("email").value;
+var message=document.getElementById("message").value;
+if(name===""||email===""||message===""){
+alert("please fill in your correct personal details in all the required fields");
+return false;
+}
+</script>
+</head>
+<body>
+<h1>Contact Tadala</h1>
+<main>
+<form id="contact-form">
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" id="name" placeholder="name" name="name"required>
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="text" id="email" placeholder="email" name="email"required>
+</div>
+<button type="submit">Submit</button>
+</form>
+</main>
+<div class="map">
+<p style="text-align:center;"><b>LOCATION:</b><br><i>Mzuzu University in luwinga Mzuzu</i></p>
+</div>
+<h3 <b>SOCIAL MEDIA LINKS</b></h3>
+<div class="social-media">
+<a href="https://www.instagram.com/talphan_nlapa"target="_blank">Instagram>
+<img "sm_icon" src="1161953_instagram_icon.png"></a>
+<br>
+<a href="https://www.facebook.com/talphan_nlapa"target="_blank">Facebook>
+<img "sm_icon" src="104498_facebook_icon.png"></a>
+<br>
+<a href="https://www.tiktok.com/talphan_nlapa"target="_blank">Tiktok>
+<img "sm_icon" src="7693325_tiktok_social media_logo_apps_icon.png"></a>
+</div>
+</script>
+</body>
+</html>
