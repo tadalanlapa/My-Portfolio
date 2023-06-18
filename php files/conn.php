@@ -1,11 +1,11 @@
 <?php
-$servername="local host";
+$servername="localhost";
 $username="root";
-$dbname="portfolio";
-
-$conn=new mysqli($servername,$username,$dbname);
-if($conn->connect error){
-die("connection failed:".$conn->connect error);
+$password="";
+$connection=mysqli_connect($servername,$username,$password);
+if(!$connection){
+die("Connection failed:".mysqli_connect_error());
 }
 echo "connected successfully";
+
 ?>

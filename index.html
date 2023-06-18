@@ -1,68 +1,82 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<style>
-<script>
-function validateForm(){
-var name=document.getElementById("name").value;
-var email=document.getElementById("email").value;
-var message=document.getElementById("message").value;
-if(name===""||email===""||message===""){
-alert("please fill in your correct personal details in all the required fields");
-return false;
-}
-</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta content="text/html; charset=iso-8859-2"http-equiv="Content-Type">
 <style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="lib/script.js"></script>
+.myProject{display:none;}
 *{box-sizing:border-box;}
-body{font-family:verdana,sans-serif;}
-.mySlides{display:none;}
-img{vertical-align:middle;}
-.slideshow-container{
-max-width:1000px;
-position:relative;
-margin:auto;
+body{
+font-family:verdana,
+sans-serif;
 }
-.text{
-color:black;
-font-size:15px;
-padding:8px 12px;
+*{
+box-sizing:border-box;
+}
+img{
+vertical-align:middle;
+}
+.container{
+position:relative;
+}
+.mySlides{
+display:none;
+}
+.cursor{
+cursor:pointer;
+}
+.prev,
+.next{
+cursor:pointer;
 position:absolute;
-bottom:8px;
-width:100%;
-text-align:center;
+top:50%;
+width:auto;
+padding:16px;
+margin-top:-50px;
+color:white;
+font-weight:bold;
+font-size:20px;
+border-radius:0 3px 3px 0;
+user-select:none;
+}
+.next{
+right:0;
+border-radius:3px 0 0 3px;
+}
+.prev:hover,
+.next:hover{
+background-color:black;
 }
 .numbertext{
-color:blue;
+color:black;
 font-size:12px;
 padding:8px 12px;
 position:absolute;
 top:0;
 }
-.dot{
-height:15px;
-width:15px;
-margin:0 2px;
-background-color:blue;
-border-radius:50%;
-display:inline-block;
-transition:background-color 0.7s ease;
+.caption-container{
+text-align:center;
+background-color:none;
+padding:2px 16px;
+color:white;
 }
-.active{
-background-color:pink;
+.row:after{
+content:"";
+display:table;
+clear:both;
 }
-.fade{
-animination-name:fade;
-animination-duration:1.4s;
+.column{
+float:left;
+width:16.66%;
 }
-@keyframes swipe{
-from{opacity:.4}
-to{opacity:1}
+.demo{
+opacity:0.6;
 }
-@media only screen and (max-width:300px){
-.text{font-size:11px}
+.active,
+.demo:hover{
+opacity:1;
 }
 .sm_icon{
 width:2px;
@@ -72,50 +86,41 @@ ul{
  list-style-type:none;
  margin:0;
  padding:0;
- over-flow:hidden;
- background-color:black;
+ overflow:hidden;
+ background-color:pink;
 }
 li{
- display:in line;
-border-right:1px solid black;
-}
-li:last-child{
-border-right:none;
+float:left;
 }
 li a{
 display:block;
-color:white;
+color:purple;
 text-align:center;
 padding:14px 16px;
 text-decoration:none;
 }
-li a:hover:not(.active){
-background-color:grey;
+li a:hover{
+background-color:white;
 }
 .active{
-background-color:pink;
-}
-.carousel{
-width:80%;
-margin:0 auto;
-}
-.carousel img{
-width:100%;
-height:auto;
+background-color:white;
 }
 </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initialscale=1.0"/>
 <title>TADALA'S HOMEPAGE</title>
 </head>
 <body>
 <div class="container">DEMO TEXT</div>
 <script src="script 2.js"></script>
 <h1 Style="color:blue;">TADALA NLAPA</h1>
+<nav>
 <ul>
-<li><a href="#home">HOME</a></li>
-<li><a href="#contact">CONTACT</a></li>
-<li><a href="#address">ADDRESS</a></li>
-<li><a href="#about">ABOUT</a></li>
+<li><a  href="index.html">HOME</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="skill.html">ABOUT</a></li>
 </ul>
+</nav>
 <br>
 <h2 Style="color:red;">BRIEF BIO</h2>
 <p><b>hello!my name is Tadala Nlapa and im a currently a level 2 student<br> studying bachelors of science in Information  and Communication Technology
@@ -123,87 +128,64 @@ at Mzuzu University</p>
 <h3 Style="color:red;">SUMMARY OF MY SKILLS & EXPERIENCE</h3>
 <p>I have computer related skills and some of the skills are:<br> ~programming and im familiar with two programming languages namely C and JAVA,<br>I can photoshop pictures and take pictures.<br>The experience i have is running codes in class & on my free time and taking pictures during my class projects</p>
 <br>
-<h4 Style="color:red;">A PICTURE OF MYSELF</h2>
+<h4 Style="color:red;">A PICTURE OF MYSELF</h4>
 <br>
 <img src="P-IMG-20221207-WA0032.jpg">
-<h5 Style="color:red;">FEATURED PROJECTS</h5>
-<p><i>This section includes some of the images,links showing the skills that I mentioned earlier<i></p>
-<div class="slideshow-container">
-<div class ="mySlides fade">
-<div class ="numbertext">1/3</div>
-<img src="IMG-20221130-WA0042.jpg" style="width:100%>
-<div class="text"><br>The image shows my skill in photography as i took pictures during a group assignment.</div>
+<h4 style="color:red;">LIST OF MY SKILLS & TOOLS </h4>
+<p>LIST OF MY SKILLS:<br>Programming<br>photography<br>photoshop<br>TOOLS:<br>Quincy for C programming<br>Visual Studio Code for Java Programming<br>Adobe Photoshop for photoshopping pictures</p> 
+<h5 Style="text-align:center;""color:red;"><b>FEATURED PROJECTS</b></h5>
+<div class="container">
+<div class="mySlides">
+<div class="numbertext">1/3</div>
+<img src="IMG-20221110-WA0015.jpg" style="width:100%">
 </div>
-<div class ="mySlides fade">
-<div class ="numbertext">2/3</div>
-<img src="IMG-20221110-WA0015.jpg" alt="skill in photoshoping" style="width:100%">
-<div class="text"><br>The picture shows my skill in photoshopping as the picture tells it all.</div>
+<div class="mySlides">
+<div class="numbertext">2/3</div>
+<img src="IMG-20221130-WA0042.jpg" style="width:100%">
 </div>
-<div class ="mySlides fade">
-<div class ="numbertext">3/3</div>
-<img src="IMG-20221208-WA0043.jpg" alt="the picture i captured" style="width:100%">
-<div class ="text"><br>The picture shows the picture i took during a class project.</div>
+<div class="mySlides">
+<div class="numbertext">3/3</div>
+<img src="IMG-20221208-WA0043.jpg" style="width:100%">
 </div>
-<script>
-let slideIndex= 1;
-showSlides(slideIndex);
- function plusSlides(n){
-showSlides (slideIndex += n);
-}
- function currentSlide(n){
-showSlides (slideIndex = n);
-}
-function showSlides(n){
-let i;
-let slides=document.getElementsByClassName("mySlides");
-let dots=document.getElementsByClassName("dot");
-if (n> slides.length) {slideIndex =1}
-if(n< 1){slideIndex =slides.length}
-for(i=0;i<slides.length;i++){
-slides[i].style.display="none";
-}
-for (i=0;i< dots.length;i++){
-dots[i].className =dots[i].className.replace(" active","");
-}
-slides[slideIndex-1].style.display="block';
-dots[slideIndex-1].className +="active";
-}
-<h6 Style="color:red;"> LIST OF MY SKILLS,TOOLS & TECHNOLOGIES</h6>
-<p>programming in c<br> programming in java<br>photoshoping<br>photography</p><br><p>TOOLS:<br>Quincy for C programming.<br>Visual Studio Code for Java programming.<br> Photoshop for photoshoping pictures.</p>
+<a class="prev" onclick="plusSlides(-1)">-</a>
+<a class="next" onclick="plusSlides(1)">-</a>
+<div class="caption-container">
+<p id="caption"></p>
+</div>
+<div class="row">
+<div class="column">
+<img class="demo cursor" src="IMG-20221110-WA0015.jpg" style="width:100%" onclick="currentSlide(1)" alt="photoshopping">
+</div>
+<div class="column">
+<img class="demo cursor" src="IMG-20221130-WA0042.jpg" style="width:100%" onclick="currentSlide(1)" alt="photography">
+</div>
+<div class="column">
+<img class="demo cursor" src="IMG-20221208-WA0043.jpg" style="width:100%" onclick="currentSlide(1)" alt="project">
+</div>
+</div>
+</div>
 <footer>
-<p>Email Address<br><a href="mail to:tadalanlapa@gmail.com">tadalanlapa@gmail.com</a></p>
-<p>Contact Information<br><a href="0990133332">0990133332</a></p>
-<h4 style="color:blue;">SOCIAL MEDIA ICONS</h4>
-<a target="_blank"href="https://www.instagram.com/talphan_nlapa/">
-<img "sm_icon" src="1161953_instagram_icon.png">
+<p Style="color:red;">CONTACT ME ON:</p>
+<p><a hef="mail to:tadalanlapa@gmail.com">tadalanlapa@gmail.com</a></p>
+<a href="phone:0990133332">0990133332</a>
+<div class="social-media">
+<a href="https://www.instagram.com/talphan_nlapa"target="_blank">Instagram
+<img "sm_icon" src="1161953_instagram_icon.png"></a>
+<a href="https://www.facebook.com/talphan_nlapa"target="_blank">Facebook
+<img "sm_icon" src="104498_facebook_icon.png"></a>
+<a href="https://www.tiktok.com/talphan_nlapa"target="_blank">Tiktok
+<img "sm_icon" src="7693325_tiktok_social media_logo_apps_icon.png"></a>
+</div>
 </a>
-<a target="_blank"href="https://www.facebook.com/talphan_nlapa/">
-<img "sm_icon" src="104498_facebook_icon.png">
-<a target="_blank"href="https://www.tiktok.com/talphan_nlapa/">
-<img "sm_icon" src="7693325_tiktok_social media_logo_apps_icon.png">
-</a>
-<form name="contact form" action="/action_page.php" on submit="return validateForm()"nmethod="post">
-FirstName:<input type ="text" name"fname"><br>
-SurName:<input type ="text" name"sname"><br>
-Email:<input type ="text" name"email"><br>
-</form>
-//<form id="contact form">
+</footer>
+<br>
+<p Style="color:red;">CONTACT FORM</p><br>
+<form id="contact form">
 <input type="text" id="name Input" placeholder="Your Name">
 <input type="email" id="email Input" placeholder="Your Email">
 <input type="password" id="password Input" placeholder="Your password">
 <button type="submit">submit here </button>
 </form>
-<script>//
-$(document).ready(function(){
-$('.carousel').slick({
-autoplay:true,
-autoplaySpeed:3000
-dots:true,
-arrows:false
-});
-});
-</script>
-</footer>
 </body>
 </html>
 
